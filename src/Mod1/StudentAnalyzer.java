@@ -4,7 +4,7 @@ import java.lang.reflect.Array;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Test1 {
+public class StudentAnalyzer {
 
     public static void main(String[] args) {
         System.out.println("Hello World");
