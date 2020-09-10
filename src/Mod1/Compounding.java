@@ -7,8 +7,9 @@ public class Compounding {
     public static void main(String[] args) {
 
         int salary;
-        Scanner input = new Scanner(System.in);
+        Scanner input;
 
+        //catch and throw input loop, try it by giving an invalid input (say, abc)
         while(true) {
             System.out.println("What is your base salary? ");
             input = new Scanner(System.in);
@@ -19,6 +20,7 @@ public class Compounding {
                 System.out.println("That isn't a valid input, try again.");
             }
         }
+
         System.out.println("Your base salary is: " + salary);
         salary += 10000;
 
