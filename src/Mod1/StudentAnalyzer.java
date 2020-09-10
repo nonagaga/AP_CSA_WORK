@@ -1,7 +1,5 @@
 package Mod1;
 
-import java.lang.reflect.Array;
-import java.util.Random;
 import java.util.Scanner;
 
 public class StudentAnalyzer {
@@ -21,10 +19,6 @@ public class StudentAnalyzer {
         boolean programmingExperience;
         int gradeLevel;
         double gpa;
-
-        programmingExperience = false;
-        gradeLevel = 11;
-        gpa = 2.9;
 
         Scanner input1 = new Scanner(System.in);
         System.out.println("Please input student name: ");
