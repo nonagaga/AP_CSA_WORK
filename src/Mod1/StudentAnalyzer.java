@@ -9,6 +9,11 @@ public class StudentAnalyzer {
     public static void main(String[] args) {
         System.out.println("Hello World");
 
+        int y = 2147483647;
+        y = y + 1;
+        System.out.println(y);
+
+
 
         //Declaration: assigns mem space
         String name;
