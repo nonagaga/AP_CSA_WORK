@@ -95,6 +95,7 @@ public class ZoomClass {
     public void setTime(String time) {
         this.time = time;
         timeArray = time.split(":",2);
+        System.out.println(timeArray[0] + timeArray[1]);
         hour = Integer.parseInt(timeArray[0]);
         min = Integer.parseInt(timeArray[1]);
     }

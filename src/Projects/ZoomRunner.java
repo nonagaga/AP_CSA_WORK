@@ -1,7 +1,13 @@
 package Projects;
 
+import com.sun.tools.corba.se.idl.StringGen;
+
+import java.util.Scanner;
+
 public class ZoomRunner {
     public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
         ZoomClass p1 = new ZoomClass();
         p1.setTeacher("Reich");
         p1.setSubject("English");
@@ -24,7 +30,41 @@ public class ZoomRunner {
         p2.setMin(45);
         p2.setDate(18);
 
+        ZoomClass p3 = new ZoomClass();
+        System.out.println("Who is your third period teacher?");
+        p3.setTeacher(input.nextLine());
+        System.out.println("What is your third period subject?");
+        p3.setSubject(input.nextLine());
+        System.out.println("What is your third period zoom url?");
+        p3.setUrl(input.nextLine());
+        System.out.println("What is the zoom password?");
+        p3.setPassword(input.nextLine());
+        System.out.println("How long is your third period class in minutes?");
+        p3.setDuration(input.nextInt());
+
+        //Errors out here for some reason
+        /*System.out.println("What time is your third period class? (ex. 12:15)");
+        String response = input.nextLine();
+        p2.setTime("9:30"); */
+
+
+        System.out.println("What date is your third period class? (12/~~/~~)");
+        p3.setDate(input.nextInt());
+        System.out.println("What month is your third period class?");
+        p3.setMonth(input.nextInt());
+        System.out.println("What year is your third period class?");
+        p3.setYear(input.nextInt());
+        System.out.println("Do you have a friend in your third period class?");
+        String response = input.nextLine();
+
+        if (response == "Yes" || response == "yes"){
+            p3.setFriendInClass(true);
+        } else if (response == "No" || response == "no"){
+            p3.setFriendInClass(false);
+        }
+
         p1.print();
         p2.print();
+        p3.print();
     }
 }
