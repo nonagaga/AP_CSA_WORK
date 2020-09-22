@@ -36,6 +36,15 @@ public class Student {
         return isMale;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setMale(boolean male) {
+        isMale = male;
+    }
+
+
+
     public void setGpa(double g) {
         gpa = g;
     }
