@@ -3,6 +3,7 @@ package Mod3;
 public class TaxReturn {
     double income;
     boolean married;
+    int ssn;
     //tax rates
 
     private static final double RATE1 = 0.15;
@@ -26,9 +27,33 @@ public class TaxReturn {
     @param married either true for married or false for single
      */
 
-    public TaxReturn(double income, boolean married){
+    public TaxReturn(double income, boolean married, int ssn){
         this.income = income;
         this.married = married;
+    }
+
+    public boolean isMarried() {
+        return married;
+    }
+
+    public void setMarried(boolean married) {
+        this.married = married;
+    }
+
+    public double getIncome() {
+        return income;
+    }
+
+    public void setIncome(double income) {
+        this.income = income;
+    }
+
+    public int getSsn() {
+        return ssn;
+    }
+
+    public void setSsn(int ssn) {
+        this.ssn = ssn;
     }
 
     public double getTax(){
@@ -63,5 +88,10 @@ public class TaxReturn {
             }
         }
         return tax;
+    }
+
+    //@override
+    public boolean equals(TaxReturn c){
+        return (this.getSsn() == c.getSsn() && this.getIncome() == c.getIncome() && this.isMarried() == c.isMarried());
     }
 }
