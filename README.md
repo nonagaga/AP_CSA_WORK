@@ -1,3 +1,3 @@
 # AP_CSA_WORK
 
-Hi Mr. Grapel
+Welcome to my school repository, if you're not Mr. Grapel then I've probably shared some code with you. Take a look around!
