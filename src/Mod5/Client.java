@@ -3,42 +3,38 @@ package Mod5;
 public class Client {
 
     String name;
-    int accountNumber;
-    BankAccount bankAccount;
+    int ssn;
 
-    public Client(String name, int accountNumber, BankAccount bankAccount){
+    public Client(String name, int ssn){
         this.name = name;
-        this.accountNumber = accountNumber;
-        this.bankAccount = bankAccount;
+        this.ssn = ssn;
     }
 
     public Client(){
         this.name = "Default Name";
-        this.accountNumber = 0;
-        this.bankAccount = new BankAccount();
+        this.ssn = 0;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setAccountNumber(int accountNumber) {
-        this.accountNumber = accountNumber;
-    }
-
-    public void setBankAccount(BankAccount bankAccount) {
-        this.bankAccount = bankAccount;
+    public void setSsn(int ssn) {
+        this.ssn = ssn;
     }
 
     public String getName() {
         return name;
     }
 
-    public int getAccountNumber() {
-        return accountNumber;
+    public int getSsn() {
+        return ssn;
     }
 
-    public BankAccount getBankAccount() {
-        return bankAccount;
+    @Override
+    public String toString() {
+        return
+                "name = '" + name + '\'' +
+                ", ssn = " + ssn;
     }
 }
