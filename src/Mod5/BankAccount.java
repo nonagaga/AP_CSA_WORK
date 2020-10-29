@@ -5,22 +5,39 @@ public class BankAccount
     private double balance;
     private int id;
     private Client client;
+    public static int numberOfAccounts;
 
     public BankAccount(double balance, int id, Client client){
         this.balance = balance;
         this.id = id;
+        this.client = client;
+        numberOfAccounts++;
+    }
+
+    public BankAccount(double balance, int id){
+        this.balance = balance;
+        this.id = id;
+        numberOfAccounts++;
+    }
+
+    public BankAccount(Client client){
         this.client = client;
     }
 
     public BankAccount(){
         this.balance = 0.00;
         this.id = 0;
-        this.client = null;
+        numberOfAccounts++;
+        this.client = new Client(this);
+    }
+
+    public String bankAccountInfo(){
+        return "BANK ACCOUNT:\nid: " + id + "\nbalance: $" + this.balance + "\n";
     }
 
     @Override
     public String toString(){
-        return "client: " + client + "\nid: " + id + "\nbalance: $" + this.balance;
+        return  "BANK ACCOUNT:\nid: " + id + "\nbalance: $" + this.balance + "\n" + client.clientInfo();
     }
 
     private void withdraw(double amt){
@@ -33,10 +50,11 @@ public class BankAccount
         balance += amt;
     }
 
-    public static void main(String[] args) {
-        Client client0 = new Client();
-        BankAccount bankAccount = new BankAccount(1000,123,client0);
+    public static int getNumberOfAccounts() {
+        return numberOfAccounts;
+    }
 
-        System.out.println(bankAccount);
+    public void attachCustomer(Client client){
+        this.client = client;
     }
 }
