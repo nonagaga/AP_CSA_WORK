@@ -11,5 +11,13 @@ public class Bank {
         System.out.println(client1);
 
         System.out.println(account1);
+
+        BankAccount account2 = new BankAccount();
+
+        System.out.println(account2);
+
+        Client client2 = new Client();
+
+        System.out.println(client2);
     }
 }
