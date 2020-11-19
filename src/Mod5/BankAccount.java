@@ -40,14 +40,20 @@ public class BankAccount
         return  "BANK ACCOUNT:\nid: " + id + "\nbalance: $" + this.balance + "\n" + client.clientInfo();
     }
 
-    private void withdraw(double amt){
-        if(balance - amt >= 0){
+    public void withdraw(double amt){
             balance -= amt;
-        }
     }
 
-    private void deposit(double amt){
+    public void deposit(double amt){
         balance += amt;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public Client getClient() {
+        return client;
     }
 
     public static int getNumberOfAccounts() {
