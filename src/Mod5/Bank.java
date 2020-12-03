@@ -1,7 +1,10 @@
 package Mod5;
 
+import java.util.ArrayList;
+
 public class Bank {
     public static void main(String[] args) {
+
         BankAccount account1 = new BankAccount(10,334);
         Client client1 = new Client("Joe",456);
 
@@ -24,11 +27,13 @@ public class Bank {
 
         System.out.println(account1);
 
-        /*BankAccount a = null;
-        BankAccount better = null;
-        better = Banker.chooseBetterAccount(a,account1,account2);
+        ArrayList<BankAccount> vip = new ArrayList<BankAccount>();
+        vip.add(account1);
+        vip.add(account2);
 
-        System.out.println(better);
-*/
+        for (BankAccount a: vip
+             ) {
+            System.out.println(a);
+        }
     }
 }

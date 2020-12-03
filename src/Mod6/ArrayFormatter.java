@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ArrayFormatter {
     /**
-     * This is some code I wrote to wrap a list of text
+     * This is some code I wrote to wrap a list of text separated by commas into an array format. Input is VIA Scanner.
      */
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -25,18 +25,22 @@ public class ArrayFormatter {
         for (int i = 0; i < words.length-1; i++) {
             boolean foundSpace = false;
             while(!foundSpace) {
-                if (list.substring(j, j + 2).equals(", ")) foundSpace = true;
+                if (list.substring(j, j + 2).equals(", ")){
+                    foundSpace = true;
+                    j++;
+                }
                 j++;
             }
-            words[i] = list.substring(k,j-1);
+            words[i] = list.substring(k,j-2);
             k = j;
         }
 
-        words[words.length-1] = list.substring(j+1);
+        words[words.length-1] = list.substring(j);
+
         System.out.print("Array of words: {");
-        for (int i = 0; i < words.length-1; i++) {
+        for (int i = 0; i < words.length; i++) {
             System.out.print("\"" + words[i] + "\"");
-            if(i < words.length-2){
+            if(i < words.length-1){
                 System.out.print(", ");
             }
         }
