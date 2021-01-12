@@ -8,7 +8,7 @@ public class Exercises {
 
     }
 
-    private long fib(int index){
+    private static long fib(int index){
         //Sum of two numbers before it
         long num1 = 0;
         long num2 = 1;
@@ -31,7 +31,7 @@ public class Exercises {
         return rev;
     }
 
-    private void tri(int base){
+    private static void tri(int base){
         String output = "";
         for(int i = 0; i < base; i++){
             output += "*";
@@ -40,38 +40,7 @@ public class Exercises {
     }
 
     public static void main(String[] args) {
-
-        /*Exercises exercises = new Exercises();
-        Scanner input = new Scanner(System.in);
-
-        System.out.println("\n"+"What index of the Fibonacci sequence would you like to evaluate?");
-        int index = input.nextInt();
-        System.out.println(exercises.fib(index));
-
-        Scanner input2 = new Scanner(System.in);
-
-        System.out.println("\n"+"What string would you like to reverse?");
-        String string = input2.nextLine();
-        System.out.println(exercises.rev(string));
-
-        System.out.println("\n"+"How big do you want your triangle's base to be?");
-        int base = input.nextInt();
-        exercises.tri(base);*/
-
-        int numRounds = 4;
-        int value = 5;
-        for(int i = 0; i <= numRounds; i++){
-            int output = 0;
-            while(true){
-                if (output == value) {
-                    System.out.println();
-                    break;
-                }
-                output = (int)(Math.random()*10);
-                System.out.print(output);
-            }
-        }
-
-
+        System.out.println(Exercises.fib(1000000000));
+        Exercises.tri(10);
     }
 }
