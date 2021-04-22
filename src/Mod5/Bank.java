@@ -6,7 +6,7 @@ public class Bank {
     public static void main(String[] args) {
 
         BankAccount account1 = new BankAccount(10,334);
-        Client client1 = new Client("Joe",456);
+        Client client1 = new Client("Joe",436);
 
         account1.attachCustomer(client1);
         client1.attachBankAccount(account1);

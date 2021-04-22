@@ -15,8 +15,9 @@ public class RangeCalc {
 
 
     public static void main(String[] arg) {
-        Plot plot = new Plot("Angle vs Range",0,90,15,0,400,10);
+        Plot plot = new Plot("Angle vs Range",0,90,15,0,100,10);
         for (int i = 0; i < 90; i++) {
-            plot.addPoint(i,calculateRange(i, calculateRange(20,i)));
+            plot.addPoint(i,calculateRange(20,i));
+
         }
     } }
